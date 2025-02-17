@@ -1,0 +1,795 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html,body{
+  scroll-behavior: smooth;
+}
+header{
+    position:fixed;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 20px 11%;
+ background:rgb(0, 183, 255);
+    width:100%;
+    height:10vh;
+    position:static;
+    z-index: 100;
+}
+header p{
+    font-size:3rem;
+    letter-spacing: 3px;
+    text-transform:uppercase;
+font-weight: bold;
+}
+
+nav a{
+    margin:0 40px 0 0;
+    font-size: 2.50rem;
+    text-decoration: none;
+    color: black;
+    transition: .4s;
+}
+nav a:hover,
+a.Home{
+    color:rgb(255, 255, 255);
+}
+.icon i{
+    font-size: 1.90rem;
+margin: 0 20px 0 0;
+cursor:pointer;
+transition: .4s ;
+scale:.90;
+}
+.icon i:active{
+    scale:1.10;
+}
+.icon #sun:hover{
+    color:yellow;
+
+}
+.icon #moon:hover{
+    color:rgb(255, 255, 255);
+
+}
+#menu,#x{
+    display: none;
+}
+/* end header */
+
+.container{
+    height: 90vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+ position: relative;
+}
+.container:after{
+    content:"";
+    width: 100%;
+    height:10%;
+    background:rgb(0, 183, 255);
+   
+    position: absolute;
+    bottom: 0;
+    border-radius: 0% 100% 0% 0%;
+}
+.text-box{
+    overflow: hidden;
+    border: 2px solid transparent;
+  
+}
+.text-box span{
+    position: relative;
+  color:rgb(189, 2, 2);
+  font-size:3rem;
+  padding: 0 10px;
+}
+.text-box .text.first-text{
+    color: aqua;
+
+}
+
+.text-box .text.sec-text:before{
+    content:"";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+border-right: 2px solid red;
+animation:mov 5S steps(999)  infinite;
+
+}
+
+.text-box .text.sec-text.actvie::before{
+    background:rgb(9, 14, 33);
+    border:none ;
+    border-right: .3rem solid rgb(255, 255, 255);
+
+  
+}
+@keyframes mov{
+   /* 0%{
+    right: 0%;
+
+  }
+  100%{
+    right: 100%;
+  }  */
+
+   0%{
+    right: 0%;
+left: 100%;
+  }
+  10%{
+    right: 15%;
+
+  }
+  25%{
+    right: 45%;
+
+  }
+  50%{
+    right: 100%;
+  
+
+  }
+  65%{
+    left: 40%;
+} 
+85%{
+    left: 30%;
+} 
+  
+  100%{
+    left:0%;
+  
+  } 
+}
+   .text-box h4{
+    font-size:4rem;
+    margin-bottom:1rem;
+    font-weight:bold;
+    color:black
+   }
+   .text-box h4.active{
+    color:#fff;
+   }
+.text-box p{
+    margin-top: 1rem;
+    color:rgb(0, 183, 255);
+    margin:1rem;
+    font-size:1.40rem;
+    font-weight: 500;
+    width: 590px;
+}
+.text-box p strong{
+    margin-top: 1rem;
+    color:rgba(238, 51, 51, 0.977);
+    margin:1rem;
+    font-size:1.40rem;
+    font-weight: 500;
+}
+.button{
+    color:rgb(0, 0, 0);
+    width: 100px;
+    font-size: 1.50rem;
+    padding: 3px;
+    border-radius: 5px;
+    border:none;
+    background:rgb(0, 183, 255);
+    cursor:pointer;
+}
+.button:hover{
+    border: 1px solid rgb(0, 183, 255) ;
+    background: none;
+    color: rgb(0, 183, 255);
+}
+/* end container */
+
+.About-my-silve{
+
+height: 100vh;
+overflow: hidden;
+}
+.About-my-silve center{
+    margin-bottom: 3rem;
+ margin-top: 10vh;
+}
+.waheed-text{
+    width: 100%;
+    padding: 20px 11%;
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+
+position: relative;
+}
+
+.waheehd-box{
+    font-size: 1.90rem;
+    height: 400px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+padding:10px
+
+}
+
+.waheehd-image {
+    width: 50%; 
+    box-shadow:1px 1px 2rem rgb(0, 217, 255);
+    border-radius: 6px;
+}
+.waheehd-image::before{
+    CONTENT:'';
+    position:absolute;
+    top: 0;
+    border-left: 3px solid;
+    width: 100%;
+    height: 100%;
+}
+.waheehd-image img{
+width: 100%;
+;
+}
+/* end About Waheehd */
+.skills{
+    border-top: 1px solid black;
+    padding: 10px;
+    height:100vh;
+}
+.skills center h4{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.skills-sec{
+    display: flex;
+}
+.one{
+    border-left: 1px solid rgb(255, 255, 255);
+    border-top: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+.one h5{
+    font-size: 1.90rem;
+  padding: 10px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    width: 100%;
+}
+ul{
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+padding-right: 10px;
+}
+ul li{
+    padding: 10px;
+    margin: 10px;
+list-style-type:square;
+accent-color: red;
+font-size: 1.60rem;  font-weight: 600;
+border-radius: 7px;
+cursor:pointer;
+
+}
+ul li:hover{
+    background-color: #ff0000ee;
+}
+
+ul li#yellow{
+    background: gold;
+}
+ul li#borbar{
+    background: rgb(81, 0, 255);
+}ul li#blue{
+    background: rgb(0, 188, 250);
+}ul li#green{
+    background: rgb(0, 243, 20);
+}
+.tow{
+ 
+   width: 100%;
+}
+.box-skills{
+  
+ display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    gap: 20px;
+}
+.box-skills h3{
+    font-size: 2.40rem;
+    margin-bottom: 3rem;
+    padding: 20px ;
+}
+.box-skills p{
+    font-size: 1.10rem;
+    color:gold;
+    font-weight: bold;
+
+}
+.box-skills span{
+    padding:20px ;
+    border: 1px solid rgb(2, 201, 231);
+    border-radius:12px;
+text-align: center;
+width: 100%;
+transition: .4s ease-in-out;
+}
+.box-skills span:hover{
+    transform: scale(.90)translateZ(4px);
+}
+.box-skills span i{
+    font-size: 3.4rem;
+    color:red;
+}
+
+.box-skills span i#htm{
+    color:rgb(255, 174, 0);
+}
+
+
+.box-skills span i#css{
+    color:rgb(0, 136, 255);
+}
+.box-skills span i#htm{
+    color:rgb(255, 174, 0);
+}
+
+.box-skills span #java{
+  color: red;
+}
+.box-skills span img{
+    width: 35px;
+    background-color: rgb(255, 255, 255);
+}
+.box-skills span #img{
+    width: 50px;
+}
+.box-skills span p#blue{
+    color: rgb(0, 188, 250);
+}
+/* end skills */
+
+.email-box{
+overflow: none;
+    height: 80vh;
+    padding: 4%;
+}
+.email-box center{
+    border-top: 1px solid  rgb(0, 145, 255);
+    padding:4px;
+}
+.email-box center p{
+    font-size: 2.90rem;
+    font-weight: bold;
+}
+.email{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+.email hr{
+    width: 250px;
+    margin-bottom: 1rem;
+   height: 6px;
+   border-radius: 12px;
+   background-color: rgb(0, 183, 255);
+   
+}
+.container-Right{
+display:flex;
+flex-direction: column;
+align-items: start;
+gap: 20px;
+transition: 4s;
+
+}
+.container-inputa{
+    width: 400px;
+    border-radius: 12px;
+    outline: none;
+    border: .3px solid black;
+padding: 10px;
+font-size: 1.4rem;
+
+}
+.container-inputa:focus{
+border: 1px solid rgb(0, 145, 255);
+transform: scale(1.1);
+}
+
+textarea.container-inputa{
+    height:240px;
+}
+.email .imagee i{
+    font-size: 25rem;
+  
+    animation:iii 3.4s steps(90) normal infinite;
+}
+
+@keyframes iii {
+    40%,60%{
+        transform: translateY(-20px);
+      
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.container-Right p{
+    font-size: 1.80rem;;
+}
+/* end  email*/
+footer{
+
+    width:100%;
+    background-color: black;
+}
+
+.iconn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+}
+.iconn p{
+    font-size: 1.80rem;
+    margin-bottom: 1rem;
+    color: aliceblue;
+}
+.iconn .i i{
+    font-size: 1.60rem;
+    padding-left: 20px;
+    margin-left:10px ;
+    color:rgb(0, 217, 255)
+}
+.iconn .i #xx:hover{
+color: rgb(120, 0, 0);
+}.iconn .i #f:hover{
+    color: rgb(0, 89, 255);
+    }.iconn .i #in:hover{
+        color: rgb(255, 89, 0);
+        }
+/* end fotter */
+
+
+/* Respons */
+    /* 1400px */
+@media (max-width:1400px) {
+
+    html{
+        font-size: 85%;
+    }
+    .skills{
+      display: flex;
+      flex-direction: column;
+      padding: 2%;
+      height: 100vh;
+    }
+    .box-skills{
+  
+        display: grid;
+        grid-template-columns: auto auto ;
+       justify-content:center;
+               height: 100%;
+               width: 100%;
+               padding: 10px;
+               gap: 20px;
+        
+           
+       }
+       .one{
+       
+        width: 100%;
+       }
+       .box-skills h3{
+        font-size: 1.40rem;
+        margin-bottom: 2rem;
+        padding: 10px ;
+    }
+    .box-skills span{
+        padding:90px ;
+        border: 1px solid rgb(2, 201, 231);
+     width: 100%;
+     height: 100%;
+    }
+
+    .email-box{
+
+        height: 100vh;
+        padding: 4%;
+    }
+
+/*  */
+
+/* @media (max-width:1024px){
+
+    .container{
+        height: 86vh;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+     position: relative;
+    } */
+
+
+
+
+
+
+
+
+
+
+
+/*  */
+}
+
+/* 1014px */
+@media (max-width:1400px) {
+
+
+    .imagee i{
+        display: block;
+    } 
+    .skills{
+        border-top: 1px solid black;
+        padding: 10px;
+    
+    }
+   
+    header nav a{
+        font-size: 1.7rem;
+    }
+}
+/* 900px  */
+@media (max-width:900px){
+header {
+    position: fixed;
+}
+    nav{
+     padding:.4rem;
+        position: fixed;
+        top: 0;
+      left: 0;
+   right:100%;
+        height:100%;
+        background:rgb(1, 146, 203);
+    
+
+    color: aliceblue;
+      transition: .7s ease-in-out;
+      z-index: 1;
+
+      }
+     
+  
+      nav a{
+        border-radius:.3rem;
+          background:rgb(1, 100, 204);      
+          display: block;
+          padding: 10px 0;
+          margin-top: 2rem;
+          margin:20px 0;
+      font-size: 80%
+      }
+   
+       nav #x{
+          font-size: 4.40rem;
+          padding: 2px;
+          position: relative;
+          top: 0;
+          left: 0;
+          right:-45%;
+          cursor:pointer;
+          transition: .7s ease-in-out;
+        
+    
+      }
+      
+      nav #x:hover{
+          color: red;
+      }
+     #x{
+          color: aliceblue;
+          width: 100%;
+          padding: 30px;
+       text-align: center;
+     
+      }
+      .icon {
+        display: flex;
+        
+        }
+      #menu,#x{
+        display: block;
+        font-size: 1.99rem
+    }
+}
+    /* 850PX */
+@media (max-width:850px) {
+    .waheed-text{
+     width: 50%;
+     padding: 17px 5%;
+     display:flex;
+     justify-content: center;
+     justify-content: center;
+  flex-direction: column;
+    }
+
+    .skills{
+    border-top: 1px solid black;
+    padding: 10px;
+height: 190vh;
+
+}
+
+    .skills-sec{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .box-skills{
+  
+        display: flex;
+           justify-content: center;
+           flex-direction: column;
+           align-items: center;
+           height: 100%;
+           width: 100%;
+           padding: 10px;
+           gap: 20px;
+         
+       }
+       .email-box{
+ margin-top: 22rem;
+        height: 70vh;
+       
+    }
+.one{
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+}
+.waheed-text{
+    width: 100%;
+    padding: 15px 6%;
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+
+position: relative;
+}
+
+header p{
+    font-size:2rem;
+}
+
+}
+
+/* 784px */
+@media (max-width:784px){
+    html{
+        font-size: 75%;
+    }
+
+
+.imagee i{
+    display: none;
+}
+  
+   
+   
+   
+.email-box{
+    height:70vh ;
+}
+    .email{
+        display: flex;
+        flex-direction: column;
+     
+    }
+}
+
+
+ 
+/* 585px */
+@media (max-width:585px){
+    .text-box{
+        overflow: none;
+        border: 2px solid transparent;
+     height: 420px;
+    }
+    
+    .waheehd-image img{
+        display: block;
+    }
+    .text-box span{
+        position: relative;
+      color:rgb(189, 2, 2);
+      font-size:4rem;
+      padding: 0 10px;
+      margin-bottom: 2rem;
+    }
+    .text-box p{
+        width: 80%;
+        font-size: 3rem;
+    }
+    .text-box p strong{
+        width: 80%;
+        font-size: 2rem;
+    }
+    .button{
+    width: 150px;
+        font-size: 2.50rem;
+    padding: 10px;
+    
+    }
+  .iconn{
+    font-size: 1rem;
+    display: flex;
+width: 100%;
+  }
+  .skills{
+    height: 190vh;
+  }
+
+}
+
+/* 429 */
+@media (max-width:455px){
+
+    .waheehd-box{
+        
+       font-size: 2.40rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 90px;
+    padding:10px
+    
+    }
+    .waheehd-image img{
+        display: none;
+    }
+    center h1 {
+font-size: 4rem;
+margin-bottom: 2rem;
+    }
+     
+
+    .container-inputa{
+        width: 300px;
+        border-radius: 12px;
+        outline: none;
+        border: .3px solid black;
+    padding: 10px;
+    font-size: 1.4rem;
+    
+    }
+    .button{
+        font-size: 2rem;
+    }
+
+}
+@media (max-width:360px){
+html , body{
+font-size: 70%;
+max-width: 360px;
+}
+}
